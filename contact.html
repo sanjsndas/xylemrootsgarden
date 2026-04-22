@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Xylem Roots Garden | Contact Us – Cultivate Connection</title>
+    <meta name="description" content="Reach the heart of Xylem Roots Garden. Get in touch for gardening consultations, collaborations, workshops, or simply to share your green journey. Our black-theme gardening hub welcomes you.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', 'Poppins', 'Roboto', system-ui, -apple-system, 'Inter', sans-serif;
+            line-height: 1.55;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* header / nav (matching main theme) */
+        header {
+            background: #000000cc;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #2a3b2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 18px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #b5e4a0, #6fbf4c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.85rem;
+            color: #8aa87d;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #a9e07c;
+            border-bottom-color: #6fbf4c;
+        }
+
+        /* contact hero */
+        .contact-hero {
+            background: radial-gradient(circle at 30% 15%, #0f1a0b, #030603);
+            padding: 55px 0 60px;
+            border-bottom: 1px solid #2e3f2a;
+        }
+
+        .contact-hero h2 {
+            font-size: 2.8rem;
+            background: linear-gradient(120deg, #e2ffcf, #9bcd6c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 18px;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            color: #c0cfb2;
+            max-width: 720px;
+        }
+
+        /* main contact grid */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin: 70px 0;
+        }
+
+        .contact-form-wrapper {
+            flex: 1.4;
+            background: #0e130b;
+            border-radius: 32px;
+            padding: 32px 36px;
+            border: 1px solid #2c4224;
+            box-shadow: 0 20px 35px -15px black;
+        }
+
+        .contact-details {
+            flex: 1;
+            background: #0b0f08;
+            border-radius: 32px;
+            padding: 32px 28px;
+            border-left: 4px solid #6fbf4c;
+            box-shadow: 0 20px 35px -15px black;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #c8e0b5;
+            letter-spacing: 0.3px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: #1a1f16;
+            border: 1px solid #3e5536;
+            padding: 14px 18px;
+            border-radius: 24px;
+            color: #f0f0e0;
+            font-size: 1rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #7bc75a;
+            box-shadow: 0 0 0 2px rgba(111, 191, 76, 0.3);
+            background: #10150c;
+        }
+
+        .btn-submit {
+            background: #2a4d1e;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .btn-submit:hover {
+            background: #4c8c37;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .info-icon {
+            font-size: 1.8rem;
+            background: #1f2a1c;
+            width: 52px;
+            height: 52px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            color: #bce68b;
+        }
+
+        .info-text p, .info-text a {
+            color: #ccddbb;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .info-text a:hover {
+            color: #a9e07c;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            background: #1f2a1c;
+            padding: 10px 20px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+            color: #dbffb8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background: #3e5c32;
+            transform: translateY(-3px);
+        }
+
+        .map-fallback {
+            margin-top: 35px;
+            background: #0c1109;
+            border-radius: 28px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #38502e;
+        }
+
+        .gardening-hours {
+            background: #111611;
+            border-radius: 24px;
+            padding: 20px;
+            margin-top: 25px;
+            border-right: 2px solid #5a9e42;
+        }
+
+        hr {
+            border-color: #2a3d22;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #020402;
+            padding: 50px 0 30px;
+            border-top: 2px solid #2f4d26;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-info p {
+            margin: 12px 0;
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
+            color: #bbbb88;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6f7c64;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 0 20px;
+            }
+            .contact-form-wrapper, .contact-details {
+                padding: 24px;
+            }
+            nav ul {
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+            .contact-hero h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .success-message {
+            background: #1e3a1a;
+            border-left: 5px solid #7bc75a;
+            padding: 14px;
+            border-radius: 24px;
+            margin-bottom: 20px;
+            display: none;
+            color: #d0ffb0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container logo-area">
+        <div class="logo">
+            <h1>🌿 XYLEM ROOTS GARDEN</h1>
+            <p>deep gardening wisdom • black earth aesthetic</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="contact-hero">
+        <div class="container">
+            <h2>🌱 Rooted dialogue —<br> let's grow together.</h2>
+            <p>Whether you're a seasoned horticulturist or starting your first windowsill garden, Xylem Roots Garden is here to support your journey. Reach out for consultations, collaborations, workshop inquiries, or simply to share the beauty of your garden. We answer every message with the same devotion we give to the soil.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h3 style="font-size: 1.9rem; margin-bottom: 8px;">✉️ Send us a message</h3>
+                <p style="margin-bottom: 28px; color: #b1c7a0;">We'll reply within 24–48 hours (Mon–Sat).</p>
+                <div id="formSuccessMsg" class="success-message">✨ Thank you! Your message has taken root. Our team will reach out soon. ✨</div>
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <label>Full name 🌿</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="e.g., River Wildwood" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email address 📧</label>
+                        <input type="email" id="email" name="email" placeholder="hello@xylemroots.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject / Inquiry type</label>
+                        <select id="subject" name="subject">
+                            <option value="gardening-advice">🌻 Gardening advice & troubleshooting</option>
+                            <option value="workshop">🧑‍🌾 Workshop / speaking event</option>
+                            <option value="collaboration">🤝 Collaboration & partnerships</option>
+                            <option value="consultation">🌿 1:1 consultation (virtual/onsite)</option>
+                            <option value="other">✨ Other – let's talk plants</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your message (soil deep wisdom) 🌍</label>
+                        <textarea rows="5" id="message" name="message" placeholder="Share your gardening dreams, questions, or feedback... we read every word." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">🌱 Send & Cultivate Connection 🌱</button>
+                </form>
+                <p style="font-size: 0.75rem; margin-top: 20px; opacity: 0.7;">By messaging, you agree to our ecological privacy practices — your data is never shared.</p>
+            </div>
+
+            <!-- Contact details & info -->
+            <div class="contact-details">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h4>Xylem Roots Sanctuary</h4>
+                        <p>1420 Evergreen Terrace, Garden District<br>Portland, OR 97214, USA</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h4>Rootline (Voice/Text)</h4>
+                        <p><a href="tel:+18004723327">+1 (800) 472-3327</a><br>Mon–Sat: 9am – 6pm (PST)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <h4>Deep ecology email</h4>
+                        <p><a href="mailto:hello@xylemroots.garden">hello@xylemroots.garden</a><br>For urgent sprout emergencies, reply within hours.</p>
+                    </div>
+                </div>
+                
+                <div class="gardening-hours">
+                    <h4>🌿 🌙  Lunar gardening hours</h4>
+                    <p>Our physical garden & nursery (by appointment only) follows the rhythm of nature. Open for walk-in visitors every second Saturday: 10am – 4pm. Workshops occur monthly — check our socials. Come feel the black soil energy.</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">📷 Instagram Garden</a>
+                    <a href="#" class="social-link">🐦 X (Roots Discourse)</a>
+                    <a href="#" class="social-link">🌳 YouTube: Xylem Talks</a>
+                </div>
+
+                <div class="map-fallback">
+                    <p>🗺️ <strong>Find our demonstration forest garden</strong><br>We are located near Laurelhurst Park. Look for the black iron gate with the giant fern mosaic. Virtual tours available upon request. Our entire team is deeply committed to regenerative practices.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- additional unique content: Contact philosophy + extended info matching 78k word spirit -->
+        <div style="background: #0b0f08; border-radius: 32px; padding: 35px; margin: 30px 0 60px; border: 1px solid #2c4224;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 20px;">📬 Let your curiosity bloom</h3>
+            <p style="margin-bottom: 16px;">Xylem Roots Garden isn't just a website — we are a living community of gardeners, permaculturists, and dark-theme aesthetic lovers. If you have suggestions for our 78k+ word compendium, wish to contribute a guest article about soil microbiology, or want to schedule a private consultation about food forest design, we are ready. Our team includes master gardeners, certified arborists, and organic land care specialists. We also provide seed swaps, compost tea brewing demonstrations, and regenerative landscaping blueprints.</p>
+            <p>💡 <strong>Pro tip from our head gardener:</strong> Before contacting us, browse our Xylem Compendium (over 78,000 words of organic wisdom). Most questions about pH balancing, companion planting, and natural pest control are already answered. However, unique garden challenges? We love those. Reach out and we’ll dive deep into your specific microclimate. Together, we cultivate resilience.</p>
+            <hr>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+                <div><span style="background: #2a4d1e; padding: 5px 12px; border-radius: 40px;">🌿 100% organic replies</span></div>
+                <div><span style="background: #2a4d1e; padding: 5px 12px; border-radius: 40px;">📖 78k+ word garden library</span></div>
+                <div><span style="background: #2a4d1e; padding: 5px 12px; border-radius: 40px;">⚫ Black theme sanctuary</span></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>🌱 Xylem Roots Garden</h3>
+                <p><span style="color:#8bcb66;">📍 Address:</span> 1420 Evergreen Terrace, Garden District, Portland, OR 97214, USA</p>
+                <p><span style="color:#8bcb66;">📞 Number:</span> +1 (800) 472-3327 (Call/Text for consultations)</p>
+                <p><span style="color:#8bcb66;">✉️ Email:</span> hello@xylemroots.garden</p>
+                <p>Open Mon–Sat: 9am – 6pm (PST)</p>
+            </div>
+            <div class="footer-links">
+                <div><a href="about.html">About Us</a><br><a href="#">Workshops</a><br><a href="#">Blog</a></div>
+                <div><a href="privacy.html">Privacy</a><br><a href="terms.html">Terms</a><br><a href="#">Donate</a></div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            © 2026 Xylem Roots Garden — Deep ecology. Black theme aesthetic. Over 78,000 words of unique gardening knowledge. All imagery & content cultivated with passion.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Contact form handler with smooth UX (simulated submission, preserves black theme)
+    const contactForm = document.getElementById('contactForm');
+    const successDiv = document.getElementById('formSuccessMsg');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // simple validation
+            const name = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const msg = document.getElementById('message').value.trim();
+            if (!name || !email || !msg) {
+                alert('🌱 Please fill in all required fields (name, email, message). Let your words take root!');
+                return;
+            }
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email address so we can reply to your gardening journey.');
+                return;
+            }
+            // simulate success message and reset form
+            successDiv.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => {
+                successDiv.style.display = 'none';
+            }, 5000);
+            // optional scroll to success
+            successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    }
+</script>
+</body>
+</html>
